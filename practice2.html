@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.one {
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(0,0,0);
+  background-color: rgb(255,255,255);
+}
+</style>
+</head>
+<body>
+
+<p class="one">dummy text.</p>
+<p> Border R(0-255):</p><input type="text" id="BR" value="">
+<p> Border G(0-255):</p><input type="text" id="BG" value="">
+<p> Border B(0-255):</p><input type="text" id="BB" value="">
+
+<p> Background R(0-255):</p><input type="text" id="TR" value="">
+<p> Background G(0-255):</p><input type="text" id="TG" value="">
+<p> Background B(0-255):</p><input type="text" id="TB" value="">
+
+<p> Border width:</p><input type="text" id="BW" value=""><br><br>
+
+<button type="button" onclick="changeColors()">Change Color</button>
+
+<script>
+function changeColors() {
+    var BR = document.getElementById("BR").value;
+    var BG = document.getElementById("BG").value;
+    var BB = document.getElementById("BB").value;
+    var TR = document.getElementById("TR").value;
+    var TG = document.getElementById("TG").value;
+    var TB = document.getElementById("TB").value;
+    var BW = document.getElementById("BW").value;
+
+    var paragraph = document.querySelector("p.one");
+    paragraph.style.borderColor = `rgb(${BR},${BG},${BB})`;
+    paragraph.style.backgroundColor = `rgb(${TR},${TG},${TB})`;
+    paragraph.style.borderWidth = `${BW}px`;
+}
+</script>
+</body>
+</html>
