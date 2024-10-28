@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compare Passwords</title>
+    <script>
+        function checkInputs() {
+            var text1 = document.getElementById("inputText1").value;
+            var text2 = document.getElementById("inputText2").value;
+
+            if (text1.length < 8 || text2.length < 8) {
+                alert("One or both inputs are less than 8 characters long.");
+            } else if (text1 === text2) {
+                    alert("inputs match.");
+                } else {
+                    alert("inputs do not match.");
+                }
+            }
+    </script>
+</head>
+<body>
+    <h1>Compare Text Inputs</h1>
+    <input type="text" id="inputText1" placeholder="Password1">
+    <input type="text" id="inputText2" placeholder="Password2">
+    <button onclick="checkInputs()">Check Inputs</button>
+</body>
+</html>
