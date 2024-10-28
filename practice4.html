@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+    <script>
+        function generateTable() {
+            var size = document.getElementById("tableSize").value;
+            var table = "<table border='1'>";
+
+            for (var i = 1; i <= size; i++) {
+                table += "<tr>";
+                for (var j = 1; j <= size; j++) {
+                    table += "<td>" + (i * j) + "</td>";
+                }
+                table += "</tr>";
+            }
+
+            table += "</table>";
+            document.getElementById("multiplicationTable").innerHTML = table;
+        }
+    </script>
+</head>
+<body>
+    <h1>Multiplication Table Generator</h1>
+    <input type="number" id="tableSize" placeholder="Enter table size">
+    <button onclick="generateTable()">Generate Table</button>
+    <div id="multiplicationTable"></div>
+</body>
+</html>
